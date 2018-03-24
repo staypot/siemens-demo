@@ -18,7 +18,7 @@ const Routing: ModuleWithProviders = RouterModule.forRoot([]);
   ],
   imports: [
     BrowserModule,
-    AnalyticsModule,
+    // AnalyticsModule,
     Routing,HttpClientModule, HttpModule,
 
   ],
