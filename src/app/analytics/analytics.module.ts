@@ -10,11 +10,11 @@ import * as highcharts from 'highcharts';
 import * as HighStock from 'highcharts/highstock';
 import * as MoreChart from 'highcharts/highstock';
 import { AnalyticsService } from './analytics.service';
-import { SpiderWebComponent } from './charts/spiderweb.component';
-import { CircleComponent } from './charts/circle.component';
-import { BarComponent } from './charts/bar.component';
-import { StockComponent } from './charts/stock.component';
-import { AreaComponent } from './charts/area.component';
+// import { SpiderWebComponent } from './charts/spiderweb.component';
+// import { CircleComponent } from './charts/circle.component';
+// import { BarComponent } from './charts/bar.component';
+// import { StockComponent } from './charts/stock.component';
+// import { AreaComponent } from './charts/area.component';
 import { FilterPipe } from '../shared/filter.pipe';
 
 import { FormsModule } from '@angular/forms';
@@ -39,12 +39,12 @@ const analyticsRouting: ModuleWithProviders = RouterModule.forChild([
   ],
   declarations: [
     AnalyticsComponent,
-    SpiderWebComponent,
-    CircleComponent,
-    BarComponent,
-    StockComponent,
-    FilterPipe,
-    AreaComponent
+    // SpiderWebComponent,
+    // CircleComponent,
+    // BarComponent,
+    // StockComponent,
+    // FilterPipe,
+    // AreaComponent
   ],
   providers: [
     AnalyticsService
