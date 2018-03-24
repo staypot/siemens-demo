@@ -31,8 +31,8 @@ const analyticsRouting: ModuleWithProviders = RouterModule.forChild([
 @NgModule({
   imports: [
     analyticsRouting,
-    ChartModule.forRoot(
-        HighStock ),
+    // ChartModule.forRoot(
+    //     HighStock ),
     CommonModule,
     FormsModule
   ],
