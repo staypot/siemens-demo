@@ -18,13 +18,7 @@ export class AnalyticsService {
    public players = [];
    
    load(){
-    this.getJSON()
-    .subscribe(
-      (responseData) => {
-        this.players = responseData;
-        //SET THE INITIAL USER
-        this.setUser(responseData[0]);
-      });
+   
    }
 
     getJSON(): Observable<any> {
