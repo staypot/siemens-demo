@@ -32,6 +32,7 @@ const analyticsRouting: ModuleWithProviders = RouterModule.forChild([
   imports: [
     analyticsRouting,
     // ChartModule.forRoot(
+    
     //     HighStock ),
     CommonModule,
     FormsModule
