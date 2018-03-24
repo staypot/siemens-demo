@@ -1,0 +1,15 @@
+<header>
+  <div class="header-container">
+  <h2 class="brand">SIEMENS</h2>
+  <label>Ingeuinly for life</label>
+
+  <ul class="current-player">
+      <li><span class="c-label">Full Name: </span><span class="c-pl-value">{{ currentUser.name }}</span></li>
+      <li><span class="c-label">Player ID: </span><span class="c-pl-value">{{ currentUser.id }}</span></li>
+      <li><span class="c-label">Power: </span><span class="c-pl-value">{{ currentUser.stats?.Power }}%</span></li>
+      <li><span class="c-label">Stamina: </span><span class="c-pl-value">{{ currentUser.stats?.Stamina }}%</span></li>            
+      <li><span class="c-label">Strength: </span><span class="c-pl-value">{{ currentUser.stats?.Strength }}% </span></li>
+      <li><span class="c-label">Intelligent: </span><span class="c-pl-value">{{ currentUser.stats?.Int }}%</span></li>
+    </ul>
+  </div>
+</header>

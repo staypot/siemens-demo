@@ -1,0 +1,41 @@
+<div class="dashboard">
+    <div class="page-title">
+        <h3>Player Statistics</h3>      
+      </div>
+     <div class="panel">
+
+        <div class="name-list">
+            <input type="text" name="search" class="search" [(ngModel)]="search" value="{{ currentUser?.name }} " >
+            <ul #pScroll>
+              <li *ngFor="let player of players | filter: 'name':search " (click)="setUserOnClick(player.id)" [ngClass]="{ 'active' : currentUser.id == player.id }">{{ player.name }}</li>
+            </ul>
+          </div>
+
+        <div class="chart-list">
+            <div class="spiderweb-chart">
+               <spiderweb-chart></spiderweb-chart>
+            </div>
+            <div class="circle-chart">
+              <circle-chart></circle-chart>   
+            </div>
+            <div class="line-chart">
+              <column-chart></column-chart>
+            </div>
+            <div class="achart">
+              <stock-chart></stock-chart>
+            </div>
+            <div class="pie-chart">
+              <area-chart></area-chart>
+            </div>
+          </div>
+     </div>
+
+      <div class="player-id-container">
+        <div class="details">
+          <h3>Players List Navigation</h3> <span>|</span> <span class="total">Total Players : {{ players.length }}</span>
+          <input type="range" min="1" max="{{ players.length }}" class="slider" #pid (change)="setUserOnSlide(pid.value)" value="{{ currentUser?.id }}">
+    
+        </div>
+      </div>
+      
+</div>

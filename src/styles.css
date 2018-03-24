@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: 'Humanist Bold';
+    src: url('/assets/fonts/humanist-777-bold-webfont.eot') format('eot');
+    src: local('☺'), 
+         url('/assets/fonts/humanist-777-bold-webfont.woff') format('woff'), 
+         url('/assets/fonts/humanist-777-bold-webfont.ttf') format('truetype'), 
+         url('/assets/fonts/humanist-777-bold-webfont.svg') format('svg');
+  }
+
+@font-face {
+    font-family: 'Lato Light';
+    src: url('/assets/fonts/Lato-Light.eot') format('eot');
+    src: local('☺'), 
+         url('/assets/fonts/Lato-Light.woff') format('woff'), 
+         url('/assets/fonts/Lato-Light.ttf') format('truetype'), 
+         url('/assets/fonts/Lato-Light.svg') format('woff2');
+  }
+
+  body{
+      margin:0;
+      background : #f9f9f9;
+  }
+  chart{display: block;
+    width: 100% !important;
+    margin: 0 auto;
+    display: block;}
+
+    chart > .highcharts-container {
+        width: 100% !important;
+    }
+
+    chart > .highcharts-container > svg {
+        width: 100% !important;
+    }
