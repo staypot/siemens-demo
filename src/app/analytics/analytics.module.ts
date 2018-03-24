@@ -15,8 +15,11 @@ import { CircleComponent } from './charts/circle.component';
 import { BarComponent } from './charts/bar.component';
 import { StockComponent } from './charts/stock.component';
 import { AreaComponent } from './charts/area.component';
-import { FilterPipe } from '../shared/filter.pipe';
 
+import { HighchartsStatic } from 'angular2-highcharts/dist/HighchartsService';
+import { SharedModule } from '../shared/shared.module';
+import { FilterPipe } from '../shared/filter.pipe';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 const analyticsRouting: ModuleWithProviders = RouterModule.forChild([
   {
@@ -24,6 +27,13 @@ const analyticsRouting: ModuleWithProviders = RouterModule.forChild([
     component: AnalyticsComponent
   }
 ]);
+declare var require: any
+export function highchartsFactory() {
+  const hc = require('highcharts/highstock');
+  const dd = require('highcharts/highcharts-more');
+  dd(hc);
+  return hc;
+  }
 
 
 
@@ -31,23 +41,27 @@ const analyticsRouting: ModuleWithProviders = RouterModule.forChild([
 @NgModule({
   imports: [
     analyticsRouting,
-    ChartModule.forRoot(
-        HighStock,
-        require('highcharts/highcharts-more') ),
+    ChartModule,
     CommonModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    RouterModule,
   ],
   declarations: [
+    FilterPipe,    
     AnalyticsComponent,
     SpiderWebComponent,
     CircleComponent,
     BarComponent,
     StockComponent,
-    FilterPipe,
-    AreaComponent
+    AreaComponent,
   ],
   providers: [
-    AnalyticsService
+    AnalyticsService,
+    {
+      provide: HighchartsStatic,
+      useFactory: highchartsFactory
+    }
   ]
 })
 export class AnalyticsModule {}

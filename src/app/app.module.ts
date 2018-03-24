@@ -9,21 +9,25 @@ import { AnalyticsModule } from './analytics/analytics.module';
 import { RouterModule } from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
 import {HttpModule} from '@angular/http';
+import { SharedModule } from './shared/shared.module';
+import { AnalyticsService } from './analytics/analytics.service';
 const Routing: ModuleWithProviders = RouterModule.forRoot([]);
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AnalyticsModule,
-    Routing,HttpClientModule, HttpModule,
-
+    SharedModule,
+    Routing,HttpClientModule, HttpModule,FormsModule, FormsModule,
+    AnalyticsModule
   ],
   providers: [
-     
+     AnalyticsService
   ],
   bootstrap: [AppComponent]
 })

@@ -12,7 +12,7 @@ export class AnalyticsComponent implements OnInit {
   options: Object;
   public players = [];
   public currentUser : Player;
-
+  search: string
   constructor(
     private analyticsService : AnalyticsService,
     private elRef:ElementRef
