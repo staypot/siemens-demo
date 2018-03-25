@@ -1,7 +1,9 @@
 .dashboard{
-  max-width: 1200px;
+  /* max-width: 1200px; */
   font-family: 'Lato Light';
   margin: auto;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 .page-title h3{
     display: inline-block;
@@ -77,6 +79,7 @@ column-chart{
     display: inline-block;
     border: 1px solid #f3f3f3;
     height: 200px;
+    width: 100%;
     background: #fff;
 }
 .achart{width: 65%;display:inline-block;}
@@ -125,9 +128,6 @@ column-chart{
     font-size: 20px;
     padding: 0 10px;
     color: #41aaaa;
-}
-.achart{
-    background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #39cccc), color-stop(1, #7adddd)) !important;
 }
 
 @media only screen  and (max-width: 1024px){
