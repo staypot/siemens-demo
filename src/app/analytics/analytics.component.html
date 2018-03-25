@@ -1,10 +1,11 @@
 <div class="dashboard">
     <div class="page-title">
-        <h3>Player Statistics</h3>      
+        <h3>{{ currentUser?.name }}'s Statistics</h3>      
       </div>
      <div class="panel">
 
         <div class="name-list">
+            <h4>Seimens List of Players</h4>          
             <input type="text" name="search" class="search" [(ngModel)]="search" value="{{ currentUser?.name }} " >
             <ul #pScroll>
               <li *ngFor="let player of players | filter: 'name': search " (click)="setUserOnClick(player.id)" [ngClass]="{ 'active' : currentUser.id == player.id }">{{ player.name }}</li>
@@ -34,7 +35,6 @@
         <div class="details">
           <h3>Players List Navigation</h3> <span>|</span> <span class="total">Total Players : {{ players.length }}</span>
           <input type="range" min="1" max="{{ players.length }}" class="slider" #pid (change)="setUserOnSlide(pid.value)" value="{{ currentUser?.id }}">
-    
         </div>
       </div>
       

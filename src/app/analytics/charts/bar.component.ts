@@ -51,7 +51,7 @@ export class BarComponent implements OnInit {
             min: 0,
             max: 100,
             title: {
-                align: 'high'
+                align: 'low'
             },
             labels: {
                 overflow: 'justify'

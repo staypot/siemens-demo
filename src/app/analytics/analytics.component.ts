@@ -8,11 +8,17 @@ import { Player } from './player.model';
   styleUrls: ['./analytics.component.css']
 })
 export class AnalyticsComponent implements OnInit {
+
   @ViewChild('pScroll') private myScrollContainer: ElementRef;
+  
   options: Object;
+  
   public players = [];
+  
   public currentUser : Player;
+  
   search: string
+  
   constructor(
     private analyticsService : AnalyticsService,
     private elRef:ElementRef
@@ -28,10 +34,7 @@ export class AnalyticsComponent implements OnInit {
           this.analyticsService.currentUser
               .subscribe(
                  (userData: Player) => {
-                this.currentUser = userData;
-
-                
-                
+                this.currentUser = userData;  
               });
         });
   }
