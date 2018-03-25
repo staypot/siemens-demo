@@ -5,7 +5,7 @@
      <div class="panel">
 
         <div class="name-list">
-            <h4>Seimens List of Players</h4>          
+            <h4>Siemens List of Players</h4>          
             <input type="text" name="search" class="search" [(ngModel)]="search" value="{{ currentUser?.name }} " >
             <ul #pScroll>
               <li *ngFor="let player of players | filter: 'name': search " (click)="setUserOnClick(player.id)" [ngClass]="{ 'active' : currentUser.id == player.id }">{{ player.name }}</li>

@@ -38,6 +38,10 @@ export class SpiderWebComponent implements OnInit {
             maxPadding:0,
             width:350,
             height: 200,
+            style: {
+                fontFamily: 'Lato Light',
+                color: "#fff"
+            }
         },
       pane: { size: '70%'},
       title:{ text: '' },
