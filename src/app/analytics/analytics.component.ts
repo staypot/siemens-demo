@@ -45,7 +45,7 @@ export class AnalyticsComponent implements OnInit {
 
   setUserOnSlide(id: number){
     this.analyticsService.setUser(this.players[id-1]);
-    this.myScrollContainer.nativeElement.scrollTo({ top: this.elRef.nativeElement.querySelectorAll('.name-list li')[id-1].offsetTop - 60, behavior: 'smooth' });
+    this.myScrollContainer.nativeElement.scrollTo({ top: this.elRef.nativeElement.querySelectorAll('.name-list li')[id-1].offsetTop - 120, behavior: 'smooth' });
   }
 
 }
